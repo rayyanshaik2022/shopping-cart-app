@@ -32,6 +32,13 @@ function Navbar() {
       <Box>
         <Tabs position="relative" variant="unstyled" size="lg">
           <TabList>
+          <Tab
+              color={"orange.100"}
+              fontSize={20}
+              _selected={{ fontWeight: "600" }}
+            >
+              Home
+            </Tab>
             <Tab
               color={"orange.100"}
               fontSize={20}

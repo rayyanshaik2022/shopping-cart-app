@@ -12,7 +12,7 @@ function Home() {
         backgroundSize={"cover"}
         backgroundPosition={"center center"}
       >
-        <Navbar />
+        <Navbar/>
         <Flex
           width={"100vw"}
           height={"calc(100vh - 80px)"}
