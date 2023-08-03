@@ -1,19 +1,16 @@
 import {
-  useDisclosure,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerHeader,
-  DrawerBody,
-  Input,
-  DrawerFooter,
-  Button,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    DrawerHeader,
+    DrawerBody, DrawerFooter,
+    Button
 } from "@chakra-ui/react";
 import { useRef } from "react";
 
 function CartDrawer(props) {
-  const { isOpen, onOpen, onClose } = props.disclosure;
+  const { isOpen, onClose } = props.disclosure;
   const btnRef = useRef();
 
   return (

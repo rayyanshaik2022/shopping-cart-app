@@ -10,11 +10,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { BsCartCheck } from "react-icons/bs";
+import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ChakraLink } from "@chakra-ui/react";
 
 function Navbar(props) {
   let handleCartClick = () => {
-    console.log(props)
-    props.handleCartBtn.onOpen()
+    props.handleCartBtn.onOpen();
   };
 
   return (
@@ -41,29 +42,37 @@ function Navbar(props) {
               color={"orange.100"}
               fontSize={20}
               _selected={{ fontWeight: "600" }}
-            >
-              Home
+            > 
+              <ChakraLink as={ReactRouterLink} to="/">
+                Home
+              </ChakraLink>
             </Tab>
             <Tab
               color={"orange.100"}
               fontSize={20}
               _selected={{ fontWeight: "600" }}
             >
-              Categories
+              <ChakraLink as={ReactRouterLink} to="/shop/">
+                Categories
+              </ChakraLink>
             </Tab>
             <Tab
               color={"orange.100"}
               fontSize={20}
               _selected={{ fontWeight: "600" }}
             >
-              Deals
+              <ChakraLink as={ReactRouterLink} to="/shop/">
+                Deals
+              </ChakraLink>
             </Tab>
             <Tab
               color={"orange.100"}
               fontSize={20}
               _selected={{ fontWeight: "600" }}
             >
-              {"What's New"}
+              <ChakraLink as={ReactRouterLink} to="/shop/">
+                {"What's New"}
+              </ChakraLink>
             </Tab>
           </TabList>
           <TabIndicator
