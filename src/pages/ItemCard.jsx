@@ -12,6 +12,12 @@ import {
 } from "@chakra-ui/react";
 
 function ItemCard(props) {
+
+    let onClickAddToCart = () => (
+        props.addToCart(props.id, props.brand, props.name, props.price)()
+    )
+
+
   if (props.isLoading) {
     return (
       <Box
@@ -51,7 +57,7 @@ function ItemCard(props) {
           <Spacer />
           <Flex alignItems={"center"} justifyContent={"space-between"} mt={-2}>
             <Heading size={"md"}>{props.price}</Heading>
-            <Button size={"sm"}>Add to cart</Button>
+            <Button size={"sm"} onClick={onClickAddToCart}>Add to cart</Button>
           </Flex>
         </Stack>
       </Box>

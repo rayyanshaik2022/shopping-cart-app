@@ -17,7 +17,7 @@ import ShopContent from "./ShopContent";
 import { useEffect, useState } from "react";
 import shopData from "../assets/data.json";
 
-function Shop() {
+function Shop(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [maxPrice, setMaxPrice] = useState("");
 
@@ -97,7 +97,7 @@ function Shop() {
             flex={"1 calc(100vw - 300px)"}
             p={6}
           >
-            <ShopContent shopData={data} loading={loading} />
+            <ShopContent shopData={data} loading={loading} addToCart={props.addToCart}/>
           </Box>
         </Flex>
       </Box>

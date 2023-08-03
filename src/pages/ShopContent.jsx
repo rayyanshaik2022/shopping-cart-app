@@ -31,7 +31,7 @@ function ShopContent(props) {
       justifyItems={"center"}
     >
       {props.shopData.shirts.map((item) => (
-        <ItemCard {...item} key={item.id} />
+        <ItemCard {...item} key={item.id} addToCart={props.addToCart}/>
       ))}
     </Grid>
   );
