@@ -11,7 +11,12 @@ import {
 } from "@chakra-ui/react";
 import { BsCartCheck } from "react-icons/bs";
 
-function Navbar() {
+function Navbar(props) {
+  let handleCartClick = () => {
+    console.log(props)
+    props.handleCartBtn.onOpen()
+  };
+
   return (
     <Flex
       w={"100vw"}
@@ -32,7 +37,7 @@ function Navbar() {
       <Box>
         <Tabs position="relative" variant="unstyled" size="lg">
           <TabList>
-          <Tab
+            <Tab
               color={"orange.100"}
               fontSize={20}
               _selected={{ fontWeight: "600" }}
@@ -61,7 +66,12 @@ function Navbar() {
               {"What's New"}
             </Tab>
           </TabList>
-          <TabIndicator mt="0px" height="3px" bg="orange.300" borderRadius="1px" />
+          <TabIndicator
+            mt="0px"
+            height="3px"
+            bg="orange.300"
+            borderRadius="1px"
+          />
         </Tabs>
       </Box>
 
@@ -72,6 +82,7 @@ function Navbar() {
           variant="solid"
           color={"white"}
           float={"right"}
+          onClick={handleCartClick}
         >
           Cart
         </Button>

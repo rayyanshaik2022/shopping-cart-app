@@ -1,8 +1,11 @@
-import { Box, Flex, Heading, Highlight, Button } from "@chakra-ui/react";
+import { Box, Flex, Heading, Highlight, Button, useDisclosure } from "@chakra-ui/react";
 import HomeBg from "../assets/home_bg.jpg";
 import Navbar from "../components/Navbar";
+import CartDrawer from "../components/CartDrawer";
 
 function Home() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Box
@@ -12,7 +15,13 @@ function Home() {
         backgroundSize={"cover"}
         backgroundPosition={"center center"}
       >
-        <Navbar/>
+        <Navbar
+          handleCartBtn={{
+            isOpen: isOpen,
+            onOpen: onOpen,
+            onClose: onClose,
+          }}
+        />
         <Flex
           width={"100vw"}
           height={"calc(100vh - 80px)"}
@@ -35,7 +44,6 @@ function Home() {
               borderRadius={48}
               flexDir={"column"}
               alignItems={"center"}
-
               gap={16}
             >
               <Heading size={"3xl"} textAlign={"center"} color={"orange.100"}>
@@ -47,11 +55,20 @@ function Home() {
                   & Practical Clothes
                 </Highlight>
               </Heading>
-              <Button size="lg" colorScheme="orange" >Shop Apparel</Button>
+              <Button size="lg" colorScheme="orange">
+                Shop Apparel
+              </Button>
             </Flex>
           </Flex>
         </Flex>
       </Box>
+      <CartDrawer
+        disclosure={{
+          isOpen: isOpen,
+          onOpen: onOpen,
+          onClose: onClose,
+        }}
+      />
     </>
   );
 }
