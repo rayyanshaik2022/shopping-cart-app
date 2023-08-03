@@ -1,5 +1,5 @@
 import { Grid } from "@chakra-ui/react";
-import ItemCard from "./ItemCard";
+import ItemCard from "../components/ItemCard";
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];
 

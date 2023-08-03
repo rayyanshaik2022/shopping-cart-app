@@ -6,7 +6,6 @@ function App(props) {
   const [cartItems, setCartItems] = useState({});
 
   let addToCart = (id, brand, name, price, image) => () => {
-    console.log(cartItems)
     if (id in cartItems) {
       setCartItems({
         ...cartItems,

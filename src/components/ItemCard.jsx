@@ -8,14 +8,25 @@ import {
   Stack,
   Button,
   Skeleton,
-  SkeletonText
+  SkeletonText,
+  useToast
 } from "@chakra-ui/react";
 
 function ItemCard(props) {
 
-    let onClickAddToCart = () => (
+    const toast = useToast()
+    
+
+    let onClickAddToCart = () => {
+        toast({
+            title: 'Item added to cart.',
+            description: `${props.name} has been added to your cart.`,
+            status: 'success',
+            duration: 4000,
+            isClosable: true,
+          })
         props.addToCart(props.id, props.brand, props.name, props.price)()
-    )
+    }
 
 
   if (props.isLoading) {
