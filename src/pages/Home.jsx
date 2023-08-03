@@ -1,10 +1,19 @@
-import { Box, Flex, Heading, Highlight, Button, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Highlight,
+  Button,
+  useDisclosure,
+} from "@chakra-ui/react";
 import HomeBg from "../assets/home_bg.jpg";
 import Navbar from "../components/Navbar";
 import CartDrawer from "../components/CartDrawer";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -21,6 +30,9 @@ function Home() {
             onOpen: onOpen,
             onClose: onClose,
           }}
+          defaultIndex="0"
+          textColor="orange.100"
+          logoColor="orange.100"
         />
         <Flex
           width={"100vw"}
@@ -55,7 +67,7 @@ function Home() {
                   & Practical Clothes
                 </Highlight>
               </Heading>
-              <Button size="lg" colorScheme="orange">
+              <Button size="lg" colorScheme="orange" onClick={() => navigate("/shop/")}>
                 Shop Apparel
               </Button>
             </Flex>

@@ -1,19 +1,28 @@
 import {
-  Flex,
-  Heading,
-  Icon,
-  Box,
-  Tabs,
-  TabList,
-  Tab,
-  TabIndicator,
-  Button,
+    Flex,
+    Heading,
+    Icon,
+    Box,
+    Tabs,
+    TabList,
+    Tab,
+    TabIndicator,
+    Button,
 } from "@chakra-ui/react";
 import { BsCartCheck } from "react-icons/bs";
-import { Link as ReactRouterLink } from "react-router-dom";
-import { Link as ChakraLink } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar(props) {
+  const navigate = useNavigate();
+
+  let routeIndex = (index) => {
+    if (index == 0) {
+      navigate("/");
+    } else if (index == 1) {
+      navigate("/shop/");
+    }
+  };
+
   let handleCartClick = () => {
     props.handleCartBtn.onOpen();
   };
@@ -30,49 +39,39 @@ function Navbar(props) {
       backdropBlur="8px"
     >
       <Box width={"180px"}>
-        <Heading as="a" color={"orange.100"} href="/">
+        <Heading as="a" color={props.logoColor} href="/">
           LifeWear
         </Heading>
       </Box>
 
       <Box>
-        <Tabs position="relative" variant="unstyled" size="lg">
+        <Tabs
+          position="relative"
+          variant="unstyled"
+          size="lg"
+          defaultIndex={props.defaultIndex}
+          onChange={(index) => routeIndex(index)}
+        >
           <TabList>
             <Tab
-              color={"orange.100"}
+              color={props.textColor}
               fontSize={20}
               _selected={{ fontWeight: "600" }}
-            > 
-              <ChakraLink as={ReactRouterLink} to="/">
+            >
+              Home
+              {/* <ChakraLink as={ReactRouterLink} to="/">
                 Home
-              </ChakraLink>
+              </ChakraLink> */}
             </Tab>
             <Tab
-              color={"orange.100"}
+              color={props.textColor}
               fontSize={20}
               _selected={{ fontWeight: "600" }}
             >
-              <ChakraLink as={ReactRouterLink} to="/shop/">
-                Categories
-              </ChakraLink>
-            </Tab>
-            <Tab
-              color={"orange.100"}
-              fontSize={20}
-              _selected={{ fontWeight: "600" }}
-            >
-              <ChakraLink as={ReactRouterLink} to="/shop/">
-                Deals
-              </ChakraLink>
-            </Tab>
-            <Tab
-              color={"orange.100"}
-              fontSize={20}
-              _selected={{ fontWeight: "600" }}
-            >
-              <ChakraLink as={ReactRouterLink} to="/shop/">
-                {"What's New"}
-              </ChakraLink>
+              Shop
+              {/* <ChakraLink as={ReactRouterLink} to="/shop/">
+                Shop
+              </ChakraLink> */}
             </Tab>
           </TabList>
           <TabIndicator
