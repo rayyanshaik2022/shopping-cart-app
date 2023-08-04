@@ -11,7 +11,7 @@ import Navbar from "../components/Navbar";
 import CartDrawer from "../components/CartDrawer";
 import { useNavigate } from "react-router-dom";
 
-function Home() {
+function Home(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
@@ -80,6 +80,7 @@ function Home() {
           onOpen: onOpen,
           onClose: onClose,
         }}
+        cartItems={props.cartItems}
       />
     </>
   );

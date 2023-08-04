@@ -107,6 +107,7 @@ function Shop(props) {
           onOpen: onOpen,
           onClose: onClose,
         }}
+        cartItems={props.cartItems}
       />
     </>
   );

@@ -6,7 +6,7 @@
       "category": "shirts",
       "brand": "Uniqlo",
       "name": "Supima® Cotton T-Shirt",
-      "price": "$24.90",
+      "price": "24.90",
       "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/457161/item/usgoods_61_457161.jpg?width=300",
       "id": 1
     },
@@ -14,7 +14,7 @@
         "category": "shirts",
         "brand": "Uniqlo",
         "name": "DRY-EX T-Shirt",
-        "price": "$24.90",
+        "price": "24.90",
         "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/456772/item/usgoods_64_456772.jpg?width=300",
         "id": 2
       },
@@ -22,7 +22,7 @@
         "category": "shirts",
         "brand": "Uniqlo",
         "name": "Dry Crew Neck T-Shirt",
-        "price": "$9.90",
+        "price": "9.90",
         "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/427917/item/usgoods_66_427917.jpg?width=300",
         "id": 3
       }

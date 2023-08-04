@@ -25,7 +25,7 @@ function ItemCard(props) {
             duration: 4000,
             isClosable: true,
           })
-        props.addToCart(props.id, props.brand, props.name, props.price)()
+        props.addToCart(props.id, props.brand, props.name, props.price, props.image)()
     }
 
 
@@ -67,7 +67,7 @@ function ItemCard(props) {
           <Text>{props.brand}</Text>
           <Spacer />
           <Flex alignItems={"center"} justifyContent={"space-between"} mt={-2}>
-            <Heading size={"md"}>{props.price}</Heading>
+            <Heading size={"md"}>${props.price}</Heading>
             <Button size={"sm"} onClick={onClickAddToCart}>Add to cart</Button>
           </Flex>
         </Stack>

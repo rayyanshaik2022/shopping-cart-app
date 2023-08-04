@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 
+import CartItem from "./CartItem";
+
 
 function CartDrawer(props) {
   const { isOpen, onClose } = props.disclosure;
@@ -23,11 +25,16 @@ function CartDrawer(props) {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent bg={"gray.50"}>
           <DrawerCloseButton />
           <DrawerHeader>Your Cart</DrawerHeader>
 
           <DrawerBody>
+            {
+              Object.keys(props.cartItems).map(key => (
+                <CartItem {...props.cartItems[key]} key={key} />
+              ))
+            }
           </DrawerBody>
 
           <DrawerFooter>
