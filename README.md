@@ -1,8 +1,23 @@
-# React + Vite
+# shopping-cart-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo Link
 
-Currently, two official plugins are available:
+[Click Here for demo]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## Completion Date
+
+08/03/2023
+
+## Finishing Remarks & Thoughts
+
+Fairly proud of how the UI and functionality turned out. I think it looks fairly close to a professional shooping website.
+
+## Features & Improvements
+
+- **UI** \* : Fully functional _drawers_ and _toasts_ thanks to _Chakra UI_
+
+## Issues & Todo
+
+- **Add Data & Implement Filters** : Currently the filters in the shop do not "work". This isn't because I couldn't get them to work, but rather because of a lack of data for the other categories since I had to "hand create" the data for shirts.
