@@ -97,7 +97,11 @@ function Shop(props) {
             flex={"1 calc(100vw - 300px)"}
             p={6}
           >
-            <ShopContent shopData={data} loading={loading} addToCart={props.addToCart}/>
+            <ShopContent
+              shopData={data}
+              loading={loading}
+              addToCart={props.addToCart}
+            />
           </Box>
         </Flex>
       </Box>
@@ -108,6 +112,8 @@ function Shop(props) {
           onClose: onClose,
         }}
         cartItems={props.cartItems}
+        removeItemCount={props.removeItemCount}
+        addItemCount={props.addItemCount}
       />
     </>
   );

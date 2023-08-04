@@ -1,16 +1,17 @@
 import {
-    Drawer,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-    DrawerHeader,
-    DrawerBody, DrawerFooter,
-    Button
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  DrawerFooter,
+  Button,
+  Flex
 } from "@chakra-ui/react";
 import { useRef } from "react";
 
 import CartItem from "./CartItem";
-
 
 function CartDrawer(props) {
   const { isOpen, onClose } = props.disclosure;
@@ -30,15 +31,20 @@ function CartDrawer(props) {
           <DrawerHeader>Your Cart</DrawerHeader>
 
           <DrawerBody>
-            {
-              Object.keys(props.cartItems).map(key => (
-                <CartItem {...props.cartItems[key]} key={key} />
-              ))
-            }
+            <Flex flexDir={"column"} gap={4}>
+              {Object.keys(props.cartItems).map((key) => (
+                <CartItem
+                  {...props.cartItems[key]}
+                  key={key}
+                  removeItemCount={props.removeItemCount(key)}
+                  addItemCount={props.addItemCount(key)}
+                />
+              ))}
+            </Flex>
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose} >
+            <Button variant="outline" mr={3} onClick={onClose}>
               Close
             </Button>
             <Button colorScheme="orange">Checkout</Button>

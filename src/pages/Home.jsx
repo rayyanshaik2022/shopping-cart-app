@@ -81,6 +81,7 @@ function Home(props) {
           onClose: onClose,
         }}
         cartItems={props.cartItems}
+        removeItemCount={props.removeItemCount} addItemCount={props.addItemCount}
       />
     </>
   );
