@@ -2,7 +2,7 @@
 
 ## Live Demo Link
 
-[Click Here for demo]()
+[Click Here for demo](https://shopping-cart-app.pages.dev/)
 
 ---
 
