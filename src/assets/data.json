@@ -25,6 +25,62 @@
         "price": "9.90",
         "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/427917/item/usgoods_66_427917.jpg?width=300",
         "id": 3
+      },
+      {
+        "category": "shirts",
+        "brand": "Uniqlo",
+        "name": "Waffle Crew T-Shirt",
+        "price": "29.90",
+        "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/460318/item/usgoods_30_460318.jpg?width=300",
+        "id": 4
+      },
+      {
+        "category": "shirts",
+        "brand": "Uniqlo",
+        "name": "AIRism Cotton T-Shirt",
+        "price": "29.90",
+        "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/460315/item/usgoods_54_460315.jpg?width=300",
+        "id": 5
+      },
+      {
+        "category": "shirts",
+        "brand": "Uniqlo",
+        "name": "U Crew Neck T-Shirt",
+        "price": "19.90",
+        "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/422992/item/usgoods_54_422992.jpg?width=300",
+        "id": 6
+      },
+      {
+        "category": "shirts",
+        "brand": "Uniqlo",
+        "name": "AIRism Cotton T-Shirt",
+        "price": "14.90",
+        "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/454315/item/usgoods_03_454315.jpg?width=700",
+        "id": 7
+      },
+      {
+        "category": "shirts",
+        "brand": "Uniqlo",
+        "name": "AIRism T-Shirt",
+        "price": "14.90",
+        "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/454312/item/usgoods_00_454312.jpg?width=700",
+        "id": 8
+      },
+      {
+        "category": "shirts",
+        "brand": "Uniqlo",
+        "name": "DRY-EX Crew Neck T-Shirt",
+        "price": "24.90",
+        "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/456773/item/usgoods_03_456773.jpg?width=700",
+        "id": 9
+      },
+      {
+        "category": "shirts",
+        "brand": "Uniqlo",
+        "name": "DRY-EX T-Shirt",
+        "price": "24.90",
+        "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/445173/item/usgoods_09_445173.jpg?width=700",
+        "id": 10
       }
   ]
 }
